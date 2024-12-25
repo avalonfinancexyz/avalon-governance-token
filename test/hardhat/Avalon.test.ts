@@ -1,6 +1,7 @@
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
 import { expect } from 'chai'
 import { Contract, ContractFactory } from 'ethers'
+import { parseEther } from 'ethers/lib/utils'
 import { deployments, ethers, upgrades } from 'hardhat'
 
 describe('Avalon Test', () => {
@@ -19,7 +20,7 @@ describe('Avalon Test', () => {
     let mockEndpointV2B: Contract
 
     before(async function () {
-        Avalon = await ethers.getContractFactory('Avalon')
+        Avalon = await ethers.getContractFactory('AvalonMintable')
 
         // Fetching the first three signers (accounts) from Hardhat's local Ethereum network
         const signers = await ethers.getSigners()
@@ -54,9 +55,9 @@ describe('Avalon Test', () => {
 
     it('should upgrade', async () => {
         // Deploying the upgradeable contract
-        const Avalon = await ethers.getContractFactory('Avalon')
-        const avalon = await upgrades.deployProxy(Avalon, ['Avalon', 'MOFT', ownerA.address], {
-            initializer: 'initialize',
+        const Avalon = await ethers.getContractFactory('AvalonMintable')
+        const avalon = await upgrades.deployProxy(Avalon, ['Avalon', 'MOFT', ownerA.address, parseEther('100000')], {
+            initializer: 'initialize(string,string,address,uint256)',
             constructorArgs: [mockEndpointV2A.address],
             unsafeAllow: ['constructor', 'state-variable-immutable'],
         })
