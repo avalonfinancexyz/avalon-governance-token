@@ -7,9 +7,10 @@ import "./Avalon.sol";
 
 contract AvalonMintable is Avalon, ERC20CappedUpgradeable {
     bytes32 public constant MINT_ROLE = keccak256("MINT_ROLE");
-    bytes32 public constant BURN_ROLE = keccak256("BURN_ROLE");
 
-    error NotInBlackList();
+    uint256 public mintedAmount;
+
+    event MintedAmountUpdated(uint256 amount);
 
     constructor(address _lzEndpoint) Avalon(_lzEndpoint) {
         _disableInitializers();
@@ -23,16 +24,16 @@ contract AvalonMintable is Avalon, ERC20CappedUpgradeable {
         super.initialize(_name, _symbol, _delegate);
 
         _setRoleAdmin(MINT_ROLE, ADMIN_ROLE);
-        _setRoleAdmin(BURN_ROLE, ADMIN_ROLE);
     }
 
     function mint(address _user, uint256 _amount) public virtual onlyRole(MINT_ROLE) {
         _mint(_user, _amount);
-    }
 
-    function burn(address _user, uint256 _amount) public virtual onlyRole(BURN_ROLE) {
-        if (!isBlackListed[_user]) revert NotInBlackList();
-        _burn(_user, _amount);
+        mintedAmount += _amount;
+        emit MintedAmountUpdated(mintedAmount);
+
+        uint256 maxSupply = cap();
+        if (mintedAmount > maxSupply) revert ERC20ExceededCap(mintedAmount, maxSupply);
     }
 
     function _update(address from, address to, uint256 value) internal override(ERC20CappedUpgradeable, Avalon) {

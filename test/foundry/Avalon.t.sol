@@ -69,7 +69,7 @@ contract AvalonTest is OFTTest {
         avalonA.mint(ownerA, mintCap);
         assertEq(avalonA.balanceOf(ownerA), mintCap);
 
-        vm.expectRevert(AvalonMintable.NotInBlackList.selector);
+        vm.expectRevert(Avalon.NotInBlackList.selector);
         avalonA.burn(ownerA, 1);
 
         avalonA.addBlackList(ownerA);
