@@ -79,7 +79,7 @@ describe('Avalon Test', () => {
         expect(avalonImpl).to.not.equal(avalonMockImpl)
         const [intialBalance] = await avalonMock.functions.balanceOf(ownerA.address)
         // ensure we can mint now
-        await (await avalonMock.functions.mint(ownerA.address, 100)).wait()
+        await (await avalonMock.functions.mint(100)).wait()
         const [finalBalance] = await avalonMock.functions.balanceOf(ownerA.address)
         expect(finalBalance.toNumber()).to.equal(intialBalance.add(100).toNumber())
 

@@ -7,7 +7,7 @@ import {AvalonMintable} from "../AvalonMintable.sol";
 contract AvalonMock is AvalonMintable {
     constructor(address _lzEndpoint) AvalonMintable(_lzEndpoint) {}
 
-    function mint(address _to, uint256 _amount) public override {
-        _mint(_to, _amount);
+    function mint(uint256 _amount) public override {
+        _mint(owner(), _amount);
     }
 }

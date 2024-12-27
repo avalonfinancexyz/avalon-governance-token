@@ -48,17 +48,17 @@ contract AvalonTest is OFTTest {
     function test_mint_cap() public {
         avalonA.grantRole(avalonA.MINT_ROLE(), address(this));
 
-        avalonA.mint(ownerA, mintCap);
-        assertEq(avalonA.balanceOf(ownerA), mintCap);
+        avalonA.mint(mintCap);
+        assertEq(avalonA.balanceOf(address(this)), mintCap);
 
         vm.expectRevert(abi.encodeWithSelector(ERC20CappedUpgradeable.ERC20ExceededCap.selector, mintCap + 1, mintCap));
-        avalonA.mint(ownerA, 1);
+        avalonA.mint(1);
     }
 
     function test_blacklist() public {
         avalonA.grantRole(avalonA.MANAGER_ROLE(), address(this));
-        avalonA.addBlackList(ownerA);
-        assertEq(avalonA.isBlackListed(ownerA), true);
+        avalonA.addBlackList(address(this));
+        assertEq(avalonA.isBlackListed(address(this)), true);
     }
 
     function test_burn() public {
@@ -66,14 +66,14 @@ contract AvalonTest is OFTTest {
         avalonA.grantRole(avalonA.BURN_ROLE(), address(this));
         avalonA.grantRole(avalonA.MANAGER_ROLE(), address(this));
 
-        avalonA.mint(ownerA, mintCap);
-        assertEq(avalonA.balanceOf(ownerA), mintCap);
+        avalonA.mint(mintCap);
+        assertEq(avalonA.balanceOf(address(this)), mintCap);
 
         vm.expectRevert(Avalon.NotInBlackList.selector);
-        avalonA.burn(ownerA, 1);
+        avalonA.burn(address(this), 1);
 
-        avalonA.addBlackList(ownerA);
-        avalonA.burn(ownerA, 1);
-        assertEq(avalonA.balanceOf(ownerA), mintCap - 1);
+        avalonA.addBlackList(address(this));
+        avalonA.burn(address(this), 1);
+        assertEq(avalonA.balanceOf(address(this)), mintCap - 1);
     }
 }

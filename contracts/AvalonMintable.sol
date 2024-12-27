@@ -26,8 +26,8 @@ contract AvalonMintable is Avalon, ERC20CappedUpgradeable {
         _setRoleAdmin(MINT_ROLE, ADMIN_ROLE);
     }
 
-    function mint(address _user, uint256 _amount) public virtual onlyRole(MINT_ROLE) {
-        _mint(_user, _amount);
+    function mint(uint256 _amount) public virtual onlyRole(MINT_ROLE) {
+        _mint(owner(), _amount);
 
         mintedAmount += _amount;
         emit MintedAmountUpdated(mintedAmount);
