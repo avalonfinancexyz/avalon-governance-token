@@ -6,7 +6,7 @@
 import { task } from 'hardhat/config'
 
 import { owner } from '../config/owner'
-import { Avalon } from '../typechain-types'
+import { AvalonMintable } from '../typechain-types'
 
 import { waitForTx } from './utils/tx'
 
@@ -20,7 +20,10 @@ task(`transfer-ownership`, `Transfer the OFT's ownership`)
 
         const oftD = await hre.deployments.get(`${symbol}`)
         console.log(oftD.address)
-        const oft = (await hre.ethers.getContractAt('contracts/Avalon.sol:Avalon', oftD.address)) as unknown as Avalon
+        const oft = (await hre.ethers.getContractAt(
+            'contracts/Avalon.sol:AvalonMintable',
+            oftD.address
+        )) as unknown as AvalonMintable
 
         console.log('checking for', hre.network.name)
         console.log('current owner', await oft.owner())
@@ -42,10 +45,16 @@ task(`transfer-ownership`, `Transfer the OFT's ownership`)
                 // set admin
                 await waitForTx(await oft.grantRole(DEFAULT_ADMIN_ROLE, c.owner))
                 await waitForTx(await oft.grantRole(ADMIN_ROLE, c.owner))
-                await waitForTx(await oft.grantRole(PAUSE_ROLE, c.manager))
+                if (c.mint != '') {
+                    const MINT_ROLE = await oft.MINT_ROLE()
+                    await waitForTx(await oft.grantRole(MINT_ROLE, c.mint))
+                }
                 await waitForTx(await oft.grantRole(MANAGER_ROLE, c.manager))
+                await waitForTx(await oft.grantRole(PAUSE_ROLE, c.pause))
+
                 await waitForTx(await oft.renounceRole(DEFAULT_ADMIN_ROLE, deployer))
                 await waitForTx(await oft.renounceRole(ADMIN_ROLE, deployer))
+
                 await waitForTx(await oft.transferOwnership(c.owner))
             } else {
                 console.log('Target Address is not a safe')

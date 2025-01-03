@@ -57,19 +57,24 @@ const config: HardhatUserConfig = {
         ],
     },
     networks: {
-        'sepolia-testnet': {
-            eid: EndpointId.SEPOLIA_V2_TESTNET,
-            url: process.env.RPC_URL_SEPOLIA || 'https://rpc.sepolia.org/',
+        'ethereum-mainnet': {
+            eid: EndpointId.ETHEREUM_V2_MAINNET,
+            url: process.env.RPC_URL_ETHEREUM || 'https://ethereum.rpc.subquery.network/public',
             accounts,
         },
-        'avalanche-testnet': {
-            eid: EndpointId.AVALANCHE_V2_TESTNET,
-            url: process.env.RPC_URL_FUJI || 'https://rpc.ankr.com/avalanche_fuji',
+        'bsc-mainnet': {
+            eid: EndpointId.BSC_V2_MAINNET,
+            url: process.env.RPC_URL_BSC || 'https://bsc-dataseed1.defibit.io',
             accounts,
         },
-        'amoy-testnet': {
-            eid: EndpointId.AMOY_V2_TESTNET,
-            url: process.env.RPC_URL_AMOY || 'https://polygon-amoy-bor-rpc.publicnode.com',
+        'bitlayer-mainnet': {
+            eid: EndpointId.BITLAYER_V2_MAINNET,
+            url: process.env.RPC_URL_BITLAYER || 'https://rpc.bitlayer-rpc.com',
+            accounts,
+        },
+        'merlin-mainnet': {
+            eid: EndpointId.MERLIN_V2_MAINNET,
+            url: process.env.RPC_URL_MERLIN || 'https://rpc.merlinchain.io',
             accounts,
         },
         hardhat: {

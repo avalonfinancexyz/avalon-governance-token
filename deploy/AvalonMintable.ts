@@ -1,9 +1,10 @@
 import { Contract } from 'ethers'
+import { parseEther } from 'ethers/lib/utils'
 import { type DeployFunction } from 'hardhat-deploy/types'
 
 import { getDeploymentAddressAndAbi } from '@layerzerolabs/lz-evm-sdk-v2'
 
-const contractName = 'Avalon'
+const contractName = 'AvalonMintable'
 
 const deploy: DeployFunction = async (hre) => {
     const { deploy } = hre.deployments
@@ -24,8 +25,8 @@ const deploy: DeployFunction = async (hre) => {
             owner: signer.address,
             execute: {
                 init: {
-                    methodName: 'initialize',
-                    args: ['AVL', 'AVL', signer.address], // TODO: add name/symbol
+                    methodName: 'initialize(string,string,address,uint256)',
+                    args: ['AVL', 'AVL', signer.address, parseEther('1000000000')], // TODO: add name/symbol
                 },
             },
         },
