@@ -1,6 +1,5 @@
 export interface OwnerConfig {
     owner: string
-    mint: string
     manager: string
     pause: string
 }
@@ -10,26 +9,22 @@ export type OwnerConfigMapping = {
 export const owner: OwnerConfigMapping = {
     'ethereum-mainnet': {
         owner: '0xbA7468D7ACcd1Bb2E346a003ab1713C3d8C4Da6d',
-        mint: '0xbA7468D7ACcd1Bb2E346a003ab1713C3d8C4Da6d',
         manager: '0x12098b516443Eb4074A5015ff58bC9f3A1f4c2b5',
         pause: '0x12098b516443Eb4074A5015ff58bC9f3A1f4c2b5',
     },
     'bsc-mainnet': {
         owner: '0xbA7468D7ACcd1Bb2E346a003ab1713C3d8C4Da6d',
         manager: '0x12098b516443Eb4074A5015ff58bC9f3A1f4c2b5',
-        mint: '',
         pause: '0x12098b516443Eb4074A5015ff58bC9f3A1f4c2b5',
     },
     'bitlayer-mainnet': {
         owner: '0xDa6fA8639334ED031eeCad79B311f78f9a441205',
         manager: '0xE46C9bAf5a23E139d9864D7b648F6531A4B3FE6c',
-        mint: '',
         pause: '0xE46C9bAf5a23E139d9864D7b648F6531A4B3FE6c',
     },
     'merlin-mainnet': {
         owner: '0xDa6fA8639334ED031eeCad79B311f78f9a441205',
         manager: '0xE46C9bAf5a23E139d9864D7b648F6531A4B3FE6c',
-        mint: '',
         pause: '0xE46C9bAf5a23E139d9864D7b648F6531A4B3FE6c',
     },
 }

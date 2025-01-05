@@ -21,7 +21,7 @@ task(`transfer-ownership`, `Transfer the OFT's ownership`)
         const oftD = await hre.deployments.get(`${symbol}`)
         console.log(oftD.address)
         const oft = (await hre.ethers.getContractAt(
-            'contracts/Avalon.sol:AvalonMintable',
+            `contracts/${symbol}.sol:${symbol}`,
             oftD.address
         )) as unknown as AvalonMintable
 
@@ -34,6 +34,9 @@ task(`transfer-ownership`, `Transfer the OFT's ownership`)
         const PAUSE_ROLE = await oft.PAUSE_ROLE()
         const MANAGER_ROLE = await oft.MANAGER_ROLE()
 
+        const timelock = await hre.deployments.get('AvalonTimelock')
+        console.log('timelock address deployed at', timelock.address)
+
         if (c.owner != '' && execute && (await oft.owner()) !== c.owner) {
             const isContract = await hre.network.provider.request({
                 method: 'eth_getCode',
@@ -44,10 +47,12 @@ task(`transfer-ownership`, `Transfer the OFT's ownership`)
                 console.log('executing changes')
                 // set admin
                 await waitForTx(await oft.grantRole(DEFAULT_ADMIN_ROLE, c.owner))
-                await waitForTx(await oft.grantRole(ADMIN_ROLE, c.owner))
-                if (c.mint != '') {
+                await waitForTx(await oft.grantRole(ADMIN_ROLE, timelock.address))
+                try {
                     const MINT_ROLE = await oft.MINT_ROLE()
-                    await waitForTx(await oft.grantRole(MINT_ROLE, c.mint))
+                    await waitForTx(await oft.grantRole(MINT_ROLE, timelock.address))
+                } catch (error) {
+                    console.log('NO MINT_ROLE')
                 }
                 await waitForTx(await oft.grantRole(MANAGER_ROLE, c.manager))
                 await waitForTx(await oft.grantRole(PAUSE_ROLE, c.pause))
@@ -61,4 +66,43 @@ task(`transfer-ownership`, `Transfer the OFT's ownership`)
             }
         }
         console.log('done\n')
+
+        console.log('DEFAULT_ADMIN_ROLE')
+        const deployerHasRole = await oft.hasRole(DEFAULT_ADMIN_ROLE, deployer)
+        console.log(deployer, 'deployer has role', deployerHasRole)
+        const ownerHasRole = await oft.hasRole(DEFAULT_ADMIN_ROLE, c.owner)
+        console.log(c.owner, 'owner has role', ownerHasRole)
+        console.log('-'.repeat(100))
+
+        console.log('ADMIN_ROLE', ADMIN_ROLE)
+        const deployerHasAdminRole = await oft.hasRole(ADMIN_ROLE, deployer)
+        console.log(deployer, 'deployer has admin role', deployerHasAdminRole)
+        const timelockHasAdminRole = await oft.hasRole(ADMIN_ROLE, timelock.address)
+        console.log(timelock.address, 'timelock has admin role', timelockHasAdminRole)
+        console.log('-'.repeat(100))
+
+        try {
+            const MINT_ROLE = await oft.MINT_ROLE()
+            const deployerHasMintRole = await oft.hasRole(MINT_ROLE, deployer)
+            console.log(deployer, 'deployer has mint role', deployerHasMintRole)
+            const timelockHasMintRole = await oft.hasRole(MINT_ROLE, timelock.address)
+            console.log(timelock.address, 'timelock has mint role', timelockHasMintRole)
+        } catch (error) {
+            console.log('NO MINT_ROLE')
+        }
+        console.log('-'.repeat(100))
+
+        console.log('MANAGER_ROLE', MANAGER_ROLE)
+        const deployerHasManagerRole = await oft.hasRole(MANAGER_ROLE, deployer)
+        console.log(deployer, 'deployer has manager role', deployerHasManagerRole)
+        const managerHasManagerRole = await oft.hasRole(MANAGER_ROLE, c.manager)
+        console.log(c.manager, 'manager has manager role', managerHasManagerRole)
+        console.log('-'.repeat(100))
+
+        console.log('PAUSE_ROLE', PAUSE_ROLE)
+        const deployerHasPauseRole = await oft.hasRole(PAUSE_ROLE, deployer)
+        console.log(deployer, 'deployer has pause role', deployerHasPauseRole)
+        const pauseHasPauseRole = await oft.hasRole(PAUSE_ROLE, c.pause)
+        console.log(c.pause, 'pause has pause role', pauseHasPauseRole)
+        console.log('-'.repeat(100))
     })

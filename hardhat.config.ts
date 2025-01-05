@@ -14,6 +14,9 @@ import '@nomiclabs/hardhat-ethers'
 import '@layerzerolabs/toolbox-hardhat'
 import '@typechain/hardhat'
 
+import fs from 'fs'
+import path from 'path'
+
 import { HardhatUserConfig, HttpNetworkAccountsUserConfig } from 'hardhat/types'
 
 import { EndpointId } from '@layerzerolabs/lz-definitions'
@@ -26,6 +29,19 @@ const MNEMONIC = process.env.MNEMONIC
 
 // If you prefer to be authenticated using a private key, set a PRIVATE_KEY environment variable
 const PRIVATE_KEY = process.env.PRIVATE_KEY
+const ETHERSCAN_KEY = process.env.ETHERSCAN_KEY || ''
+
+// load tasks
+export const loadTasks = (): void => {
+    const tasksPath = path.join(__dirname, './tasks')
+    fs.readdirSync(tasksPath)
+        .filter((pth) => pth.includes('.ts') || pth.includes('.js'))
+        .forEach((task) => {
+            require(`${tasksPath}/${task}`)
+        })
+}
+
+loadTasks()
 
 const accounts: HttpNetworkAccountsUserConfig | undefined = MNEMONIC
     ? { mnemonic: MNEMONIC }
@@ -86,6 +102,27 @@ const config: HardhatUserConfig = {
         deployer: {
             default: 0, // wallet address of index[0], of the mnemonic in .env
         },
+    },
+    etherscan: {
+        apiKey: ETHERSCAN_KEY,
+        customChains: [
+            {
+                network: 'bitlayer-mainnet',
+                chainId: 200901,
+                urls: {
+                    apiURL: 'https://api.btrscan.com/scan/api',
+                    browserURL: 'https://www.btrscan.com/',
+                },
+            },
+            {
+                network: 'merlin-mainnet',
+                chainId: 4200,
+                urls: {
+                    apiURL: 'https://scan.merlinchain.io/api/contract',
+                    browserURL: 'https://scan.merlinchain.io/',
+                },
+            },
+        ],
     },
     layerZero: {
         // You can tell hardhat toolbox not to include any deployments (hover over the property name to see full docs)
