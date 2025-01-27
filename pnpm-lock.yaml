@@ -17,13 +17,13 @@ importers:
         version: 7.26.0
       '@layerzerolabs/devtools-evm-hardhat':
         specifier: ^2.0.4
-        version: 2.0.4(5ajwijqqu3vbia2gvcnvrjh3x4)
+        version: 2.0.4(tfk263mh3qwl2zhsdntd2fwl5i)
       '@layerzerolabs/eslint-config-next':
         specifier: ~2.3.39
         version: 2.3.44(typescript@5.7.2)
       '@layerzerolabs/lz-definitions':
-        specifier: ^3.0.27
-        version: 3.0.36
+        specifier: ^3.0.53
+        version: 3.0.53
       '@layerzerolabs/lz-evm-messagelib-v2':
         specifier: ^3.0.12
         version: 3.0.36(@axelar-network/axelar-gmp-sdk-solidity@5.10.0)(@chainlink/contracts-ccip@0.7.6(bufferutil@4.0.9)(ethers@5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10))(@eth-optimism/contracts@0.6.0(bufferutil@4.0.9)(ethers@5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10))(@layerzerolabs/lz-evm-protocol-v2@3.0.36(@openzeppelin/contracts-upgradeable@5.1.0(@openzeppelin/contracts@5.1.0))(@openzeppelin/contracts@5.1.0)(hardhat-deploy@0.12.4(bufferutil@4.0.9)(utf-8-validate@5.0.10))(solidity-bytes-utils@0.8.2))(@layerzerolabs/lz-evm-v1-0.7@3.0.36(@openzeppelin/contracts-upgradeable@5.1.0(@openzeppelin/contracts@5.1.0))(@openzeppelin/contracts@5.1.0)(hardhat-deploy@0.12.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)))(@openzeppelin/contracts-upgradeable@5.1.0(@openzeppelin/contracts@5.1.0))(@openzeppelin/contracts@5.1.0)(hardhat-deploy@0.12.4(bufferutil@4.0.9)(utf-8-validate@5.0.10))(solidity-bytes-utils@0.8.2)
@@ -41,7 +41,7 @@ importers:
         version: 3.0.36
       '@layerzerolabs/metadata-tools':
         specifier: ^0.0.2
-        version: 0.0.2(@layerzerolabs/devtools-evm-hardhat@2.0.4(5ajwijqqu3vbia2gvcnvrjh3x4))(@layerzerolabs/ua-devtools@3.0.2(rwpyob7nsuv7g33mzuzypiizny))
+        version: 0.0.2(@layerzerolabs/devtools-evm-hardhat@2.0.4(tfk263mh3qwl2zhsdntd2fwl5i))(@layerzerolabs/ua-devtools@3.0.2(yn7iqjvycblii7scxsltvoazq4))
       '@layerzerolabs/oapp-evm':
         specifier: ^0.3.0
         version: 0.3.0(5ardm6nmgdsn3c2fnbtf4ibiqe)
@@ -585,8 +585,8 @@ packages:
       yoga-layout-prebuilt:
         optional: true
 
-  '@layerzerolabs/lz-definitions@3.0.36':
-    resolution: {integrity: sha512-yWfnKpaqMNQp0S/jSvylCPk6z0ymz+k3CMNcYh+Sod22GPB8wywy8ef4eUnDcpAkizGLeX61wF0mSA5ky6OVRg==}
+  '@layerzerolabs/lz-definitions@3.0.53':
+    resolution: {integrity: sha512-68pQ5jBqpJfKQ+Y5tgD8BT21d4C/RNm9CxaavxrVAL3IRr41a+doWMyW7CsXFRos6QR9v/YrzCZop+VE4D92kw==}
 
   '@layerzerolabs/lz-evm-messagelib-v2@3.0.36':
     resolution: {integrity: sha512-qXTTEToviq95L8GDI/YCT7kUbGsls1QOJfoJZX+zLDyPfZ6W4fjs1vci3TmGtrK1XbS0iJ00F+4XlnqBiFLvIQ==}
@@ -1636,9 +1636,9 @@ packages:
     resolution: {integrity: sha512-WDtdLmJvAuNNPzByAYpRo2rF1Mmradw6gvWsQKf63476DDXmomT9zUiGypLcG4ibIM67vhAj8jJRdbmEws2Aqw==}
     engines: {node: '>=6.14.2'}
 
-  bufio@1.2.2:
-    resolution: {integrity: sha512-sTsA0ka7sjge/bGUfjk00O/8kNfyeAvJjXXeyvgbXefIrf5GTp99W71qfmCP6FGHWbr4A0IjjM7dFj6bHXVMlw==}
-    engines: {node: '>=14.0.0'}
+  bufio@1.2.3:
+    resolution: {integrity: sha512-5Tt66bRzYUSlVZatc0E92uDenreJ+DpTBmSAUwL4VSxJn3e6cUyYwx+PoqML0GRZatgA/VX8ybhxItF8InZgqA==}
+    engines: {node: '>=8.0.0'}
 
   bytes@3.1.2:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
@@ -1872,8 +1872,8 @@ packages:
     resolution: {integrity: sha512-6DnInpx7SJ2AK3+CTUE/ZM0vWTUboZCegxhC2xiIydHR9jNuTAASBrfEpHhiGOZw/nX51bHt6YQl8jsGo4y/0w==}
     engines: {node: '>= 0.6'}
 
-  core-js-pure@3.39.0:
-    resolution: {integrity: sha512-7fEcWwKI4rJinnK+wLTezeg2smbFFdSBP6E2kQZNbnzM2s1rpKQ6aaRteZSSg7FLU3P0HGGVo/gbpfanU36urg==}
+  core-js-pure@3.40.0:
+    resolution: {integrity: sha512-AtDzVIgRrmRKQai62yuSIN5vNiQjcJakJb4fbhVw3ehxx7Lohphvw9SGNWKhLFqSxC4ilD0g/L1huAYFQU3Q6A==}
 
   core-util-is@1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
@@ -3247,6 +3247,7 @@ packages:
 
   lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    deprecated: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
 
   lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
@@ -3840,6 +3841,10 @@ packages:
     resolution: {integrity: sha512-EJPeIn0CYrGu+hli1xilKAPXODtJ12T0sP63Ijx2/khC2JtuaN3JyNIpvmnkmaEtha9ocbG4A4cMcr+TvqvwQg==}
     engines: {node: '>=0.6'}
 
+  qs@6.14.0:
+    resolution: {integrity: sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==}
+    engines: {node: '>=0.6'}
+
   qs@6.5.3:
     resolution: {integrity: sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==}
     engines: {node: '>=0.6'}
@@ -4210,8 +4215,8 @@ packages:
   spdx-expression-parse@3.0.1:
     resolution: {integrity: sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==}
 
-  spdx-license-ids@3.0.20:
-    resolution: {integrity: sha512-jg25NiDV/1fLtSgEgyvVyDunvaNHbuwF9lfNV17gSmPFAlYzdfNBlLtLzXTevwkPj7DhGbmN9VnmJIgLnhvaBw==}
+  spdx-license-ids@3.0.21:
+    resolution: {integrity: sha512-Bvg/8F5XephndSK3JffaRqdT+gyhfqIPwDHpX80tJrF8QQRYMo8sNMeaZ2Dp5+jhwKnUmIOyFFQfHRkjJm5nXg==}
 
   sshpk@1.18.0:
     resolution: {integrity: sha512-2p2KJZTSqQ/I3+HX42EpYOa2l3f8Erv8MWKsy2I9uf4wA7yFIkXRffYdsx86y6z4vHtV8u7g+pPlr8/4ouAxsQ==}
@@ -4535,6 +4540,10 @@ packages:
 
   undici@5.28.4:
     resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
+    engines: {node: '>=14.0'}
+
+  undici@5.28.5:
+    resolution: {integrity: sha512-zICwjrDrcrUE0pyyJc1I2QzBkLM8FINsgOrt6WjA+BgajVq9Nxu2PbFFXUrAggLfDXlZGZBVZYw7WNV5KiBiBA==}
     engines: {node: '>=14.0'}
 
   unfetch@4.2.0:
@@ -5120,7 +5129,7 @@ snapshots:
       '@ethersproject/rlp': 5.7.0
       '@ethersproject/transactions': 5.7.0
       '@ethersproject/web': 5.7.1
-      bufio: 1.2.2
+      bufio: 1.2.3
       chai: 4.5.0
     transitivePeerDependencies:
       - bufferutil
@@ -5201,7 +5210,7 @@ snapshots:
   '@ethereumjs/common@2.6.0':
     dependencies:
       crc-32: 1.2.2
-      ethereumjs-util: 7.1.5
+      ethereumjs-util: 7.1.3
 
   '@ethereumjs/common@2.6.5':
     dependencies:
@@ -5220,8 +5229,8 @@ snapshots:
 
   '@ethereumjs/tx@3.4.0':
     dependencies:
-      '@ethereumjs/common': 2.6.5
-      ethereumjs-util: 7.1.5
+      '@ethereumjs/common': 2.6.0
+      ethereumjs-util: 7.1.3
 
   '@ethereumjs/tx@3.5.2':
     dependencies:
@@ -5238,12 +5247,12 @@ snapshots:
     dependencies:
       '@ethereumjs/block': 3.6.3
       '@ethereumjs/blockchain': 5.5.3
-      '@ethereumjs/common': 2.6.5
-      '@ethereumjs/tx': 3.5.2
+      '@ethereumjs/common': 2.6.0
+      '@ethereumjs/tx': 3.4.0
       async-eventemitter: 0.2.4
-      core-js-pure: 3.39.0
+      core-js-pure: 3.40.0
       debug: 2.6.9
-      ethereumjs-util: 7.1.5
+      ethereumjs-util: 7.1.3
       functional-red-black-tree: 1.0.1
       mcl-wasm: 0.7.9
       merkle-patricia-tree: 4.2.4
@@ -5590,17 +5599,17 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@layerzerolabs/devtools-evm-hardhat@2.0.4(5ajwijqqu3vbia2gvcnvrjh3x4)':
+  '@layerzerolabs/devtools-evm-hardhat@2.0.4(tfk263mh3qwl2zhsdntd2fwl5i)':
     dependencies:
       '@ethersproject/abi': 5.7.0
       '@ethersproject/abstract-signer': 5.7.0
       '@ethersproject/contracts': 5.7.0
       '@ethersproject/providers': 5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
-      '@layerzerolabs/devtools-evm': 1.0.2(p2uauzj2jfuv4bltpzpnseg5c4)
+      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
+      '@layerzerolabs/devtools-evm': 1.0.2(6p7aab5b7naofwtct4lmw3uqpu)
       '@layerzerolabs/export-deployments': 0.0.14
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
+      '@layerzerolabs/lz-definitions': 3.0.53
       '@nomiclabs/hardhat-ethers': 2.2.3(ethers@5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(hardhat@2.22.17(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@18.18.14)(typescript@5.7.2))(typescript@5.7.2)(utf-8-validate@5.0.10))
       '@safe-global/protocol-kit': 1.3.0(bufferutil@4.0.9)(ethers@5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
       fp-ts: 2.16.9
@@ -5616,7 +5625,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@layerzerolabs/devtools-evm@1.0.2(p2uauzj2jfuv4bltpzpnseg5c4)':
+  '@layerzerolabs/devtools-evm@1.0.2(6p7aab5b7naofwtct4lmw3uqpu)':
     dependencies:
       '@ethersproject/abi': 5.7.0
       '@ethersproject/abstract-provider': 5.7.0
@@ -5626,9 +5635,9 @@ snapshots:
       '@ethersproject/constants': 5.7.0
       '@ethersproject/contracts': 5.7.0
       '@ethersproject/providers': 5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
+      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
+      '@layerzerolabs/lz-definitions': 3.0.53
       '@safe-global/api-kit': 1.3.1
       '@safe-global/protocol-kit': 1.3.0(bufferutil@4.0.9)(ethers@5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
       ethers: 5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
@@ -5641,11 +5650,11 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)':
+  '@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)':
     dependencies:
       '@ethersproject/bytes': 5.7.0
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
+      '@layerzerolabs/lz-definitions': 3.0.53
       bs58: 6.0.0
       exponential-backoff: 3.1.1
       js-yaml: 4.1.0
@@ -5697,7 +5706,7 @@ snapshots:
       react: 17.0.2
       yoga-layout-prebuilt: 1.10.0
 
-  '@layerzerolabs/lz-definitions@3.0.36':
+  '@layerzerolabs/lz-definitions@3.0.53':
     dependencies:
       tiny-invariant: 1.3.3
 
@@ -5755,10 +5764,10 @@ snapshots:
       bs58: 5.0.0
       tiny-invariant: 1.3.3
 
-  '@layerzerolabs/metadata-tools@0.0.2(@layerzerolabs/devtools-evm-hardhat@2.0.4(5ajwijqqu3vbia2gvcnvrjh3x4))(@layerzerolabs/ua-devtools@3.0.2(rwpyob7nsuv7g33mzuzypiizny))':
+  '@layerzerolabs/metadata-tools@0.0.2(@layerzerolabs/devtools-evm-hardhat@2.0.4(tfk263mh3qwl2zhsdntd2fwl5i))(@layerzerolabs/ua-devtools@3.0.2(yn7iqjvycblii7scxsltvoazq4))':
     dependencies:
-      '@layerzerolabs/devtools-evm-hardhat': 2.0.4(5ajwijqqu3vbia2gvcnvrjh3x4)
-      '@layerzerolabs/ua-devtools': 3.0.2(rwpyob7nsuv7g33mzuzypiizny)
+      '@layerzerolabs/devtools-evm-hardhat': 2.0.4(tfk263mh3qwl2zhsdntd2fwl5i)
+      '@layerzerolabs/ua-devtools': 3.0.2(yn7iqjvycblii7scxsltvoazq4)
 
   '@layerzerolabs/oapp-evm-upgradeable@0.1.0(5ardm6nmgdsn3c2fnbtf4ibiqe)':
     dependencies:
@@ -5808,7 +5817,7 @@ snapshots:
       prettier-plugin-packagejson: 2.5.6(prettier@3.4.2)
       prettier-plugin-solidity: 1.4.1(prettier@3.4.2)
 
-  '@layerzerolabs/protocol-devtools-evm@3.0.3(a4b4ujrtzzhc4gnbnzmu6b47om)':
+  '@layerzerolabs/protocol-devtools-evm@3.0.3(a75ftdxyrzis7zjx5o45zbg5ay)':
     dependencies:
       '@ethersproject/abstract-provider': 5.7.0
       '@ethersproject/abstract-signer': 5.7.0
@@ -5816,19 +5825,19 @@ snapshots:
       '@ethersproject/constants': 5.7.0
       '@ethersproject/contracts': 5.7.0
       '@ethersproject/providers': 5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
-      '@layerzerolabs/devtools-evm': 1.0.2(p2uauzj2jfuv4bltpzpnseg5c4)
+      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
+      '@layerzerolabs/devtools-evm': 1.0.2(6p7aab5b7naofwtct4lmw3uqpu)
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
-      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
+      '@layerzerolabs/lz-definitions': 3.0.53
+      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
       p-memoize: 4.0.4
       zod: 3.24.1
 
-  '@layerzerolabs/protocol-devtools@1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)':
+  '@layerzerolabs/protocol-devtools@1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)':
     dependencies:
-      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
+      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
+      '@layerzerolabs/lz-definitions': 3.0.53
       zod: 3.24.1
 
   '@layerzerolabs/solhint-config@3.0.36(typescript@5.7.2)':
@@ -5861,20 +5870,20 @@ snapshots:
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/contracts': 5.7.0
       '@ethersproject/hash': 5.7.0
-      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
-      '@layerzerolabs/devtools-evm': 1.0.2(p2uauzj2jfuv4bltpzpnseg5c4)
-      '@layerzerolabs/devtools-evm-hardhat': 2.0.4(5ajwijqqu3vbia2gvcnvrjh3x4)
+      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
+      '@layerzerolabs/devtools-evm': 1.0.2(6p7aab5b7naofwtct4lmw3uqpu)
+      '@layerzerolabs/devtools-evm-hardhat': 2.0.4(tfk263mh3qwl2zhsdntd2fwl5i)
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
+      '@layerzerolabs/lz-definitions': 3.0.53
       '@layerzerolabs/lz-evm-sdk-v1': 3.0.36(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@layerzerolabs/lz-evm-sdk-v2': 3.0.36(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@layerzerolabs/lz-v2-utilities': 3.0.36
-      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
-      '@layerzerolabs/protocol-devtools-evm': 3.0.3(a4b4ujrtzzhc4gnbnzmu6b47om)
+      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
+      '@layerzerolabs/protocol-devtools-evm': 3.0.3(a75ftdxyrzis7zjx5o45zbg5ay)
       '@layerzerolabs/test-devtools-evm-hardhat': 0.5.0(hardhat@2.22.17(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@18.18.14)(typescript@5.7.2))(typescript@5.7.2)(utf-8-validate@5.0.10))(solidity-bytes-utils@0.8.2)
-      '@layerzerolabs/ua-devtools': 3.0.2(rwpyob7nsuv7g33mzuzypiizny)
-      '@layerzerolabs/ua-devtools-evm': 5.0.3(65qfhwgbt347k2wefvvpdhttia)
-      '@layerzerolabs/ua-devtools-evm-hardhat': 6.0.5(govni7d6avcao4jg6vmdccgjgu)
+      '@layerzerolabs/ua-devtools': 3.0.2(yn7iqjvycblii7scxsltvoazq4)
+      '@layerzerolabs/ua-devtools-evm': 5.0.3(nipcwll35vtuhfo7td4wvdrgpq)
+      '@layerzerolabs/ua-devtools-evm-hardhat': 6.0.5(cazbxdle7accmksjouz365usmu)
       '@nomicfoundation/hardhat-ethers': 3.0.8(ethers@5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(hardhat@2.22.17(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@18.18.14)(typescript@5.7.2))(typescript@5.7.2)(utf-8-validate@5.0.10))
       ethers: 5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       fp-ts: 2.16.9
@@ -5900,49 +5909,49 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@layerzerolabs/ua-devtools-evm-hardhat@6.0.5(govni7d6avcao4jg6vmdccgjgu)':
+  '@layerzerolabs/ua-devtools-evm-hardhat@6.0.5(cazbxdle7accmksjouz365usmu)':
     dependencies:
       '@ethersproject/abi': 5.7.0
       '@ethersproject/bytes': 5.7.0
       '@ethersproject/contracts': 5.7.0
       '@ethersproject/hash': 5.7.0
-      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
-      '@layerzerolabs/devtools-evm': 1.0.2(p2uauzj2jfuv4bltpzpnseg5c4)
-      '@layerzerolabs/devtools-evm-hardhat': 2.0.4(5ajwijqqu3vbia2gvcnvrjh3x4)
+      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
+      '@layerzerolabs/devtools-evm': 1.0.2(6p7aab5b7naofwtct4lmw3uqpu)
+      '@layerzerolabs/devtools-evm-hardhat': 2.0.4(tfk263mh3qwl2zhsdntd2fwl5i)
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
-      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
-      '@layerzerolabs/protocol-devtools-evm': 3.0.3(a4b4ujrtzzhc4gnbnzmu6b47om)
-      '@layerzerolabs/ua-devtools': 3.0.2(rwpyob7nsuv7g33mzuzypiizny)
-      '@layerzerolabs/ua-devtools-evm': 5.0.3(65qfhwgbt347k2wefvvpdhttia)
+      '@layerzerolabs/lz-definitions': 3.0.53
+      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
+      '@layerzerolabs/protocol-devtools-evm': 3.0.3(a75ftdxyrzis7zjx5o45zbg5ay)
+      '@layerzerolabs/ua-devtools': 3.0.2(yn7iqjvycblii7scxsltvoazq4)
+      '@layerzerolabs/ua-devtools-evm': 5.0.3(nipcwll35vtuhfo7td4wvdrgpq)
       ethers: 5.7.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       hardhat: 2.22.17(bufferutil@4.0.9)(ts-node@10.9.2(@types/node@18.18.14)(typescript@5.7.2))(typescript@5.7.2)(utf-8-validate@5.0.10)
       hardhat-deploy: 0.12.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       p-memoize: 4.0.4
       typescript: 5.7.2
 
-  '@layerzerolabs/ua-devtools-evm@5.0.3(65qfhwgbt347k2wefvvpdhttia)':
+  '@layerzerolabs/ua-devtools-evm@5.0.3(nipcwll35vtuhfo7td4wvdrgpq)':
     dependencies:
       '@ethersproject/constants': 5.7.0
       '@ethersproject/contracts': 5.7.0
-      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
-      '@layerzerolabs/devtools-evm': 1.0.2(p2uauzj2jfuv4bltpzpnseg5c4)
+      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
+      '@layerzerolabs/devtools-evm': 1.0.2(6p7aab5b7naofwtct4lmw3uqpu)
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
+      '@layerzerolabs/lz-definitions': 3.0.53
       '@layerzerolabs/lz-v2-utilities': 3.0.36
-      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
-      '@layerzerolabs/protocol-devtools-evm': 3.0.3(a4b4ujrtzzhc4gnbnzmu6b47om)
-      '@layerzerolabs/ua-devtools': 3.0.2(rwpyob7nsuv7g33mzuzypiizny)
+      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
+      '@layerzerolabs/protocol-devtools-evm': 3.0.3(a75ftdxyrzis7zjx5o45zbg5ay)
+      '@layerzerolabs/ua-devtools': 3.0.2(yn7iqjvycblii7scxsltvoazq4)
       p-memoize: 4.0.4
       zod: 3.24.1
 
-  '@layerzerolabs/ua-devtools@3.0.2(rwpyob7nsuv7g33mzuzypiizny)':
+  '@layerzerolabs/ua-devtools@3.0.2(yn7iqjvycblii7scxsltvoazq4)':
     dependencies:
-      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
+      '@layerzerolabs/devtools': 0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
       '@layerzerolabs/io-devtools': 0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1)
-      '@layerzerolabs/lz-definitions': 3.0.36
+      '@layerzerolabs/lz-definitions': 3.0.53
       '@layerzerolabs/lz-v2-utilities': 3.0.36
-      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.36)(zod@3.24.1)
+      '@layerzerolabs/protocol-devtools': 1.1.2(@layerzerolabs/devtools@0.4.3(@ethersproject/bytes@5.7.0)(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1))(@layerzerolabs/io-devtools@0.1.14(ink-gradient@2.0.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink-table@3.1.0(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2))(ink@3.2.0(bufferutil@4.0.9)(react@17.0.2)(utf-8-validate@5.0.10))(react@17.0.2)(yoga-layout-prebuilt@1.10.0)(zod@3.24.1))(@layerzerolabs/lz-definitions@3.0.53)(zod@3.24.1)
       zod: 3.24.1
 
   '@mdn/browser-compat-data@5.6.26': {}
@@ -6101,7 +6110,7 @@ snapshots:
       lodash: 4.17.21
       semver: 6.3.1
       table: 6.9.0
-      undici: 5.28.4
+      undici: 5.28.5
     transitivePeerDependencies:
       - supports-color
 
@@ -6634,7 +6643,7 @@ snapshots:
   abstract-leveldown@6.2.3:
     dependencies:
       buffer: 5.7.1
-      immediate: 3.3.0
+      immediate: 3.2.3
       level-concat-iterator: 2.0.1
       level-supports: 1.0.1
       xtend: 4.0.2
@@ -6997,7 +7006,7 @@ snapshots:
     dependencies:
       node-gyp-build: 4.8.4
 
-  bufio@1.2.2: {}
+  bufio@1.2.3: {}
 
   bytes@3.1.2: {}
 
@@ -7261,7 +7270,7 @@ snapshots:
 
   cookie@0.7.1: {}
 
-  core-js-pure@3.39.0: {}
+  core-js-pure@3.40.0: {}
 
   core-util-is@1.0.2: {}
 
@@ -9515,6 +9524,10 @@ snapshots:
     dependencies:
       side-channel: 1.1.0
 
+  qs@6.14.0:
+    dependencies:
+      side-channel: 1.1.0
+
   qs@6.5.3: {}
 
   query-string@5.1.1:
@@ -9988,16 +10001,16 @@ snapshots:
   spdx-correct@3.2.0:
     dependencies:
       spdx-expression-parse: 3.0.1
-      spdx-license-ids: 3.0.20
+      spdx-license-ids: 3.0.21
 
   spdx-exceptions@2.5.0: {}
 
   spdx-expression-parse@3.0.1:
     dependencies:
       spdx-exceptions: 2.5.0
-      spdx-license-ids: 3.0.20
+      spdx-license-ids: 3.0.21
 
-  spdx-license-ids@3.0.20: {}
+  spdx-license-ids@3.0.21: {}
 
   sshpk@1.18.0:
     dependencies:
@@ -10363,6 +10376,10 @@ snapshots:
     dependencies:
       '@fastify/busboy': 2.1.1
 
+  undici@5.28.5:
+    dependencies:
+      '@fastify/busboy': 2.1.1
+
   unfetch@4.2.0: {}
 
   universalify@0.1.2: {}
@@ -10386,7 +10403,7 @@ snapshots:
   url@0.11.4:
     dependencies:
       punycode: 1.4.1
-      qs: 6.13.1
+      qs: 6.14.0
 
   utf-8-validate@5.0.10:
     dependencies:

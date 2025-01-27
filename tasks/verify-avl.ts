@@ -3,14 +3,9 @@ import { task } from 'hardhat/config'
 
 import { getDeploymentAddressAndAbi } from '@layerzerolabs/lz-evm-sdk-v2'
 
-import { owner } from '../config/owner'
-
 task(`verify-avl`).setAction(async (_, { deployments, ...hre }) => {
     const { get } = deployments
     console.log('hre.network.name', hre.network.name)
-    const network = hre.network.name
-    const c = owner[network]
-    if (!c) throw new Error('cannot find connection')
 
     try {
         console.log(`- Verifying Avalon`)
