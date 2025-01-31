@@ -93,6 +93,11 @@ const config: HardhatUserConfig = {
             url: process.env.RPC_URL_MERLIN || 'https://rpc.merlinchain.io',
             accounts,
         },
+        'taiko-mainnet': {
+            eid: EndpointId.TAIKO_V2_MAINNET,
+            url: process.env.RPC_URL_TAIKO || 'https://rpc.mainnet.taiko.xyz',
+            accounts,
+        },
         'sepolia-testnet': {
             eid: EndpointId.SEPOLIA_V2_TESTNET,
             url: process.env.RPC_URL_ETHEREUM_SEPOLIA || 'https://eth-sepolia.api.onfinality.io/public',
@@ -125,6 +130,14 @@ const config: HardhatUserConfig = {
                 urls: {
                     apiURL: 'https://scan.merlinchain.io/api/contract',
                     browserURL: 'https://scan.merlinchain.io/',
+                },
+            },
+            {
+                network: 'taiko-mainnet',
+                chainId: 167000,
+                urls: {
+                    apiURL: 'https://api.taikoscan.io/api',
+                    browserURL: 'https://taikoscan.io/',
                 },
             },
         ],

@@ -27,4 +27,9 @@ export const owner: OwnerConfigMapping = {
         manager: '0xE46C9bAf5a23E139d9864D7b648F6531A4B3FE6c',
         pause: '0xE46C9bAf5a23E139d9864D7b648F6531A4B3FE6c',
     },
+    'taiko-mainnet': {
+        owner: '0x6691EC6133568579545EacAD015180DEc846c98B',
+        manager: '0x0a71164e8964fe5Da633710B4100f5Df3E742EDe',
+        pause: '0x0a71164e8964fe5Da633710B4100f5Df3E742EDe',
+    },
 }
