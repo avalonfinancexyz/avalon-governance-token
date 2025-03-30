@@ -5,6 +5,8 @@
  */
 import { task } from 'hardhat/config'
 
+import { EndpointV2__factory } from '@layerzerolabs/lz-evm-sdk-v2'
+
 import { owner } from '../config/owner'
 import { AvalonMintable } from '../typechain-types'
 
@@ -46,20 +48,36 @@ task(`transfer-ownership`, `Transfer the OFT's ownership`)
             if (isContract !== '0x') {
                 console.log('executing changes')
                 // set admin
+                console.log('setting DEFAULT_ADMIN_ROLE')
                 await waitForTx(await oft.grantRole(DEFAULT_ADMIN_ROLE, c.owner))
+
+                console.log('setting ADMIN_ROLE')
                 await waitForTx(await oft.grantRole(ADMIN_ROLE, timelock.address))
+
+                console.log('try setting MINT_ROLE')
                 try {
                     const MINT_ROLE = await oft.MINT_ROLE()
                     await waitForTx(await oft.grantRole(MINT_ROLE, timelock.address))
                 } catch (error) {
                     console.log('NO MINT_ROLE')
                 }
+
+                console.log('setting MANAGER_ROLE')
                 await waitForTx(await oft.grantRole(MANAGER_ROLE, c.manager))
+
+                console.log('setting PAUSE_ROLE')
                 await waitForTx(await oft.grantRole(PAUSE_ROLE, c.pause))
 
+                console.log('setting delegate')
+                await waitForTx(await oft.setDelegate(c.owner))
+
+                console.log('renouncing DEFAULT_ADMIN_ROLE')
                 await waitForTx(await oft.renounceRole(DEFAULT_ADMIN_ROLE, deployer))
+
+                console.log('renouncing ADMIN_ROLE')
                 await waitForTx(await oft.renounceRole(ADMIN_ROLE, deployer))
 
+                console.log('transferring ownership')
                 await waitForTx(await oft.transferOwnership(c.owner))
             } else {
                 console.log('Target Address is not a safe')
@@ -105,4 +123,11 @@ task(`transfer-ownership`, `Transfer the OFT's ownership`)
         const pauseHasPauseRole = await oft.hasRole(PAUSE_ROLE, c.pause)
         console.log(c.pause, 'pause has pause role', pauseHasPauseRole)
         console.log('-'.repeat(100))
+
+        console.log(
+            'delegate',
+            await EndpointV2__factory.connect(await oft.endpoint(), hre.ethers.provider).delegates(oft.address)
+        )
+
+        console.log('owner', await oft.owner())
     })

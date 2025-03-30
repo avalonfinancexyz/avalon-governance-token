@@ -32,4 +32,9 @@ export const owner: OwnerConfigMapping = {
         manager: '0x0a71164e8964fe5Da633710B4100f5Df3E742EDe',
         pause: '0x0a71164e8964fe5Da633710B4100f5Df3E742EDe',
     },
+    'bera-mainnet': {
+        owner: '0x74e878f47C5B1F01571e727F25271C1a34bf2cC1',
+        manager: '0xE46C9bAf5a23E139d9864D7b648F6531A4B3FE6c',
+        pause: '0xE46C9bAf5a23E139d9864D7b648F6531A4B3FE6c',
+    },
 }

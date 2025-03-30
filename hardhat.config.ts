@@ -98,6 +98,11 @@ const config: HardhatUserConfig = {
             url: process.env.RPC_URL_TAIKO || 'https://rpc.mainnet.taiko.xyz',
             accounts,
         },
+        'bera-mainnet': {
+            eid: EndpointId.BERA_V2_MAINNET,
+            url: process.env.RPC_URL_BERA || 'https://rpc.berachain.com',
+            accounts,
+        },
         'sepolia-testnet': {
             eid: EndpointId.SEPOLIA_V2_TESTNET,
             url: process.env.RPC_URL_ETHEREUM_SEPOLIA || 'https://eth-sepolia.api.onfinality.io/public',
@@ -138,6 +143,14 @@ const config: HardhatUserConfig = {
                 urls: {
                     apiURL: 'https://api.taikoscan.io/api',
                     browserURL: 'https://taikoscan.io/',
+                },
+            },
+            {
+                network: 'bera-mainnet',
+                chainId: 80094,
+                urls: {
+                    apiURL: 'https://api.berascan.com/api',
+                    browserURL: 'https://berascan.com/',
                 },
             },
         ],
