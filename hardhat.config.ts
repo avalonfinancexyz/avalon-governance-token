@@ -103,6 +103,11 @@ const config: HardhatUserConfig = {
             url: process.env.RPC_URL_BERA || 'https://rpc.berachain.com',
             accounts,
         },
+        'klaytn-mainnet': {
+            eid: EndpointId.KLAYTN_V2_MAINNET,
+            url: process.env.RPC_URL_KLAYTN || 'https://go.getblock.io/d7094dbd80ab474ba7042603fe912332',
+            accounts,
+        },
         'sepolia-testnet': {
             eid: EndpointId.SEPOLIA_V2_TESTNET,
             url: process.env.RPC_URL_ETHEREUM_SEPOLIA || 'https://eth-sepolia.api.onfinality.io/public',
@@ -151,6 +156,14 @@ const config: HardhatUserConfig = {
                 urls: {
                     apiURL: 'https://api.berascan.com/api',
                     browserURL: 'https://berascan.com/',
+                },
+            },
+            {
+                network: 'klaytn-mainnet',
+                chainId: 8217,
+                urls: {
+                    apiURL: 'https://api-cypress.klaytnscope.com/api',
+                    browserURL: 'https://kaiascope.com/',
                 },
             },
         ],

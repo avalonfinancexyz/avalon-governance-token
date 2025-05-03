@@ -27,6 +27,11 @@ const bera_mainnetContract = {
     contractName: 'Avalon',
 }
 
+const klaytn_mainnetContract = {
+    eid: EndpointId.KLAYTN_V2_MAINNET,
+    contractName: 'Avalon',
+}
+
 const bitlayer_dvns = [
     '0x95729ea44326f8add8a9b1d987279dbdc1dd3dff', // Horizen
     '0x6788f52439aca6bff597d3eec2dc9a44b8fee842', // LayerZero Labs
@@ -63,6 +68,12 @@ const bera_dvns = [
     '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b', // Nethermind
 ]
 
+const klaytn_dvns = [
+    '0xacde1f22eeab249d3ca6ba8805c8fee9f52a16e7', // Horizen
+    '0xc80233ad8251e668becbc3b0415707fc7075501e', // LayerZero Labs
+    '0x6a4c9096f162f0ab3c0517b0a40dc1ce44785e16', // Nethermind
+]
+
 export default {
     contracts: [
         { contract: bitlayer_mainnetContract },
@@ -71,6 +82,7 @@ export default {
         { contract: merlin_mainnetContract },
         { contract: taiko_mainnetContract },
         { contract: bera_mainnetContract },
+        { contract: klaytn_mainnetContract },
     ],
     connections: [
         {
@@ -249,6 +261,31 @@ export default {
             },
         },
         {
+            from: bsc_mainnetContract,
+            to: klaytn_mainnetContract,
+            config: {
+                sendLibrary: '0x9F8C645f2D0b2159767Bd6E0839DE4BE49e823DE',
+                receiveLibraryConfig: { receiveLibrary: '0xB217266c3A98C8B2709Ee26836C98cf12f6cCEC1', gracePeriod: 0 },
+                sendConfig: {
+                    executorConfig: { maxMessageSize: 10000, executor: '0x3ebD570ed38B1b3b4BC886999fcF507e9D584859' },
+                    ulnConfig: {
+                        confirmations: 20,
+                        requiredDVNs: bsc_dvns,
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: 30,
+                        requiredDVNs: bsc_dvns,
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
             from: ethereum_mainnetContract,
             to: bitlayer_mainnetContract,
             config: {
@@ -351,6 +388,31 @@ export default {
         {
             from: ethereum_mainnetContract,
             to: bera_mainnetContract,
+            config: {
+                sendLibrary: '0xbB2Ea70C9E858123480642Cf96acbcCE1372dCe1',
+                receiveLibraryConfig: { receiveLibrary: '0xc02Ab410f0734EFa3F14628780e6e695156024C2', gracePeriod: 0 },
+                sendConfig: {
+                    executorConfig: { maxMessageSize: 10000, executor: '0x173272739Bd7Aa6e4e214714048a9fE699453059' },
+                    ulnConfig: {
+                        confirmations: 15,
+                        requiredDVNs: ethereum_dvns,
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: 30,
+                        requiredDVNs: ethereum_dvns,
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: ethereum_mainnetContract,
+            to: klaytn_mainnetContract,
             config: {
                 sendLibrary: '0xbB2Ea70C9E858123480642Cf96acbcCE1372dCe1',
                 receiveLibraryConfig: { receiveLibrary: '0xc02Ab410f0734EFa3F14628780e6e695156024C2', gracePeriod: 0 },
@@ -517,6 +579,56 @@ export default {
                     ulnConfig: {
                         confirmations: 20,
                         requiredDVNs: bera_dvns,
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: klaytn_mainnetContract,
+            to: ethereum_mainnetContract,
+            config: {
+                sendLibrary: '0x9714Ccf1dedeF14BaB5013625DB92746C1358cb4',
+                receiveLibraryConfig: { receiveLibrary: '0x937AbA873827BF883CeD83CA557697427eAA46Ee', gracePeriod: 0 },
+                sendConfig: {
+                    executorConfig: { maxMessageSize: 10000, executor: '0xe149187a987F129FD3d397ED04a60b0b89D1669f' },
+                    ulnConfig: {
+                        confirmations: 30,
+                        requiredDVNs: klaytn_dvns,
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: 15,
+                        requiredDVNs: klaytn_dvns,
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+            },
+        },
+        {
+            from: klaytn_mainnetContract,
+            to: bsc_mainnetContract,
+            config: {
+                sendLibrary: '0x9714Ccf1dedeF14BaB5013625DB92746C1358cb4',
+                receiveLibraryConfig: { receiveLibrary: '0x937AbA873827BF883CeD83CA557697427eAA46Ee', gracePeriod: 0 },
+                sendConfig: {
+                    executorConfig: { maxMessageSize: 10000, executor: '0xe149187a987F129FD3d397ED04a60b0b89D1669f' },
+                    ulnConfig: {
+                        confirmations: 30,
+                        requiredDVNs: klaytn_dvns,
+                        optionalDVNs: [],
+                        optionalDVNThreshold: 0,
+                    },
+                },
+                receiveConfig: {
+                    ulnConfig: {
+                        confirmations: 20,
+                        requiredDVNs: klaytn_dvns,
                         optionalDVNs: [],
                         optionalDVNThreshold: 0,
                     },
